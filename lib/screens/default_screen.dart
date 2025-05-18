@@ -70,10 +70,7 @@ class _DefaultScreenState extends State<DefaultScreen> {
         key: const Key('fabAddHabito'),
         child: Icon(Icons.add),
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => AdicionarHabido())
-          );
+          Navigator.pushNamed(context, '/add_habito');
         },
       ),
     );
