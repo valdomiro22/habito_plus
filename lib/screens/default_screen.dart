@@ -67,6 +67,7 @@ class _DefaultScreenState extends State<DefaultScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        key: const Key('fabAddHabito'),
         child: Icon(Icons.add),
         onPressed: () {
           Navigator.push(
