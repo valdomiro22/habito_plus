@@ -18,7 +18,6 @@ class _AdicionarHabidoState extends State<AdicionarHabido> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: const Key('telaAdicionarHabito'),
         appBar: AppBar(
           title: Text(
               'Adicionar Habido',
@@ -59,7 +58,7 @@ class _AdicionarHabidoState extends State<AdicionarHabido> {
                   key: const Key('buttomSalbar'),
                   child: Text('Salvar'),
                   onPressed: () {
-
+                    Navigator.pop(context);
                   },
                 )
               ],
