@@ -6,8 +6,11 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: const Key('telaHome'),
       body: Center(
-        child: Text('Home'),
+        child: Text(
+          'Home',
+        ),
       )
     );
   }

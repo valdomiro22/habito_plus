@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:habito_plus/screens/perfil.dart';
+import 'package:habito_plus/screens/per'
+    'fil.dart';
 
 import 'adicionar_habido.dart';
 import 'historico.dart';
@@ -40,6 +41,7 @@ class _DefaultScreenState extends State<DefaultScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        key: const Key('bottomNavBar'),
         currentIndex: _paginaSelecionada,
         onTap: (index) {
           setState(() {
@@ -48,16 +50,19 @@ class _DefaultScreenState extends State<DefaultScreen> {
         },
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home'
+            key: const Key('menuHome'),
+            icon: Icon(Icons.home),
+            label: 'Home'
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.history),
-              label: 'Historico'
+            key: const Key('menuHistorico'),
+            icon: Icon(Icons.history),
+            label: 'Historico'
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Perfil'
+            key: const Key('menuPerfil'),
+            icon: Icon(Icons.person),
+            label: 'Perfil'
           ),
         ],
       ),
