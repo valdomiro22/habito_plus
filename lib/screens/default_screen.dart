@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:habito_plus/screens/per'
     'fil.dart';
 
-import 'adicionar_habido.dart';
 import 'historico.dart';
 import 'home.dart';
 
@@ -15,8 +14,6 @@ class DefaultScreen extends StatefulWidget {
 
 class _DefaultScreenState extends State<DefaultScreen> {
   int _paginaSelecionada = 0;
-
-  final List<Widget> _paginas = [];
 
   @override
   Widget build(BuildContext context) {
