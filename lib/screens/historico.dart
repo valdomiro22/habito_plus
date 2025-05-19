@@ -6,6 +6,7 @@ class Historico extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: const Key('telaHistorico'),
       body: Center(
         child: Text('Historico'),
       )

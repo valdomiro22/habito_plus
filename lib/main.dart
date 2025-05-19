@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habito_plus/screens/adicionar_habido.dart';
 import 'package:habito_plus/screens/default_screen.dart';
 
 void main() {
@@ -11,10 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Habito plus',
-      home: DefaultScreen(),
       debugShowCheckedModeBanner: false,
-
+      title: 'Habito plus',
+      initialRoute: '/',
+      routes: {
+        '/': (_) => DefaultScreen(),
+        '/add_habito': (_) => AdicionarHabido(),
+      },
     );
   }
 }

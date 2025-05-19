@@ -29,12 +29,14 @@ class _AdicionarHabidoState extends State<AdicionarHabido> {
             child: Column(
               children: [
                 TextField(
+                  key: const Key('textFieldHamito'),
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                   ),
                 ),
                 SizedBox(height: 16,),
                 DropdownButton(
+                  key: const Key('dropDownButtonFrequencia'),
                   isExpanded: true,
                   value: _frenquanciaSelecionada,
                   hint: Text('Escolha uma opão'),
@@ -51,9 +53,10 @@ class _AdicionarHabidoState extends State<AdicionarHabido> {
                   },
                 ),
                 ElevatedButton(
+                  key: const Key('buttomSalbar'),
                   child: Text('Salvar'),
                   onPressed: () {
-
+                    Navigator.pop(context);
                   },
                 )
               ],

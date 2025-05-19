@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:habito_plus/screens/perfil.dart';
+import 'package:habito_plus/screens/per'
+    'fil.dart';
 
-import 'adicionar_habido.dart';
 import 'historico.dart';
 import 'home.dart';
 
@@ -14,8 +14,6 @@ class DefaultScreen extends StatefulWidget {
 
 class _DefaultScreenState extends State<DefaultScreen> {
   int _paginaSelecionada = 0;
-
-  final List<Widget> _paginas = [];
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +38,7 @@ class _DefaultScreenState extends State<DefaultScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        key: const Key('bottomNavBar'),
         currentIndex: _paginaSelecionada,
         onTap: (index) {
           setState(() {
@@ -48,26 +47,27 @@ class _DefaultScreenState extends State<DefaultScreen> {
         },
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home'
+            key: const Key('menuHome'),
+            icon: Icon(Icons.home),
+            label: 'Home'
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.history),
-              label: 'Historico'
+            key: const Key('menuHistorico'),
+            icon: Icon(Icons.history),
+            label: 'Historico'
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Perfil'
+            key: const Key('menuPerfil'),
+            icon: Icon(Icons.person),
+            label: 'Perfil'
           ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        key: const Key('fabAddHabito'),
         child: Icon(Icons.add),
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => AdicionarHabido())
-          );
+          Navigator.pushNamed(context, '/add_habito');
         },
       ),
     );
